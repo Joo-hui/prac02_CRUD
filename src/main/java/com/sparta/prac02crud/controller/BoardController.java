@@ -1,6 +1,7 @@
 package com.sparta.prac02crud.controller;
 
 import com.sparta.prac02crud.dto.BoardRequestDto;
+import com.sparta.prac02crud.dto.BoardResponseDto;
 import com.sparta.prac02crud.model.Board;
 import com.sparta.prac02crud.service.BoardService;
 import lombok.RequiredArgsConstructor;
@@ -20,16 +21,16 @@ public class BoardController {
         return ResponseEntity.ok().body(boardService.createBoard(requestDto));
     }
 
-    @GetMapping("/api/boards")
-    public List<Board> getBoards() {
-
-        return boardService.getBoards();
-    }
-
 //    @GetMapping("/api/boards")
-//    public List<BoardResponseDto> getBoard() {
-//        return boardService.showBoard();
+//    public List<Board> getBoards() {
+//
+//        return boardService.getBoards();
 //    }
+
+    @GetMapping("/api/boards")
+    public List<BoardResponseDto> getBoard() {
+        return boardService.showBoard();
+    }
 
     @DeleteMapping("/api/boards/{boardId}")
     public Board deleteBoard(@PathVariable Long boardId) {

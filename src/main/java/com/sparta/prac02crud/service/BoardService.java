@@ -27,28 +27,28 @@ public class BoardService {
         return new ResponseEntity("저장 잘 됨", HttpStatus.OK);
     }
 
-    @Transactional
-    public List<Board> getBoards() {
-
-        return boardRepository.findAllByOrderByModifiedAtDesc();
-    }
-
-//    public List<BoardResponseDto> showBoard(){
-//        List<Board> boards = boardRepository.findAllByOrderByModifiedAtDesc();
-//        List<BoardResponseDto> boardResponseDtos = new ArrayList<>();
+//    @Transactional
+//    public List<Board> getBoards() {
 //
-//        for(Board board : boards){
-//            BoardResponseDto boardResponseDto = new BoardResponseDto(
-//             board.getBoardId(),
-//             board.getUsername(),
-//             board.getTitle(),
-//             board.getContent(),
-//             board.getModifiedAt()
-//            );
-//            boardResponseDtos.add(boardResponseDto);
-//        }
-//        return boardResponseDtos;
+//        return boardRepository.findAllByOrderByModifiedAtDesc();
 //    }
+
+    public List<BoardResponseDto> showBoard(){
+        List<Board> boards = boardRepository.findAllByOrderByModifiedAtDesc();
+        List<BoardResponseDto> boardResponseDtos = new ArrayList<>();
+
+        for(Board board : boards){
+            BoardResponseDto boardResponseDto = new BoardResponseDto(
+             board.getBoardId(),
+             board.getUsername(),
+             board.getTitle(),
+             board.getContent(),
+             board.getModifiedAt()
+            );
+            boardResponseDtos.add(boardResponseDto);
+        }
+        return boardResponseDtos;
+    }
 
     @Transactional
     public Board deleteBoard(Long boardId) {
