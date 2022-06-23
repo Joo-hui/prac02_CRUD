@@ -5,7 +5,7 @@
 
   ## 🚀  스택
   #### Back-end <br>
- <img src="https://img.shields.io/badge/SpringBoot-6DB33F?style=flat&logo=SpringBoot&logoColor=white"/> <img src="https://img.shields.io/badge/Spring Security-6DB33F?style=flat&logo=Spring Security&logoColor=white"/> 
+ <img src="https://img.shields.io/badge/SpringBoot-6DB33F?style=flat&logo=SpringBoot&logoColor=white"/> <img src="https://img.shields.io/badge/Spring Security-6DB33F?style=flat&logo=Spring Security&logoColor=white"/> <img src="https://img.shields.io/badge/JAVA-007396?style=flat&logo=Java&logoColor=white"/> 
 
   #### Front-end <br>
 
@@ -27,6 +27,22 @@
    https://www.notion.so/99_7-_-_7-fc117b49c8fb41189531a181fbf887a3#7f7c4a67b499470f9a71034f03725529
     
   ## 🚗 기능 구현
-    
-    회원가입
+  
+  ### User
+   * 회원가입 & 로그인 & 로그아웃
+      
+  ### Main
+   * 테슬라 메인 페이지
+   * 차량 모델 상세 조회
+     
+   ### Shop
+   * shop 메인 페이지
+   * item 카테고리 조회    
+   * item 상세 조회
+     
+   ### Cart
+   * Cart 조회
+   * Cart item 추가
+   * Cart item 삭제
+   * 비로그인 회원 Cart 구현 
     
